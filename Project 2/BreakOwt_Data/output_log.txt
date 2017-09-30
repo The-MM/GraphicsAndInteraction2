@@ -17,31 +17,46 @@ Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and I
 Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.029 seconds
+- Completed reload, in  0.036 seconds
 Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.438098 ms
+UnloadTime: 1.627187 ms
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 31f8 -> priority: 1 
-  Thread -> id: 2930 -> priority: 1 
-  Thread -> id: 28a4 -> priority: 1 
-  Thread -> id: 814 -> priority: 1 
-Scene 'MainScene' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
-To add a scene to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 140)
+  Thread -> id: 470c -> priority: 1 
+  Thread -> id: 2984 -> priority: 1 
+  Thread -> id: 425c -> priority: 1 
+  Thread -> id: 19c4 -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.242682 ms
 
-Scene 'MainScene' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
-To add a scene to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 140)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.300015 ms (FindLiveObjects: 0.054871 ms CreateObjectMapping: 0.022501 ms MarkObjects: 0.214747 ms  DeleteObjects: 0.007500 ms)
 
-Scene 'MainScene' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
-To add a scene to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 140)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.458312 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.264092 ms (FindLiveObjects: 0.028817 ms CreateObjectMapping: 0.025659 ms MarkObjects: 0.202510 ms  DeleteObjects: 0.007105 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.461865 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.294093 ms (FindLiveObjects: 0.039870 ms CreateObjectMapping: 0.039475 ms MarkObjects: 0.206852 ms  DeleteObjects: 0.007105 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.481208 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.285803 ms (FindLiveObjects: 0.032370 ms CreateObjectMapping: 0.030396 ms MarkObjects: 0.214352 ms  DeleteObjects: 0.008289 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.393177 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.276329 ms (FindLiveObjects: 0.029606 ms CreateObjectMapping: 0.037501 ms MarkObjects: 0.200931 ms  DeleteObjects: 0.007500 ms)
 

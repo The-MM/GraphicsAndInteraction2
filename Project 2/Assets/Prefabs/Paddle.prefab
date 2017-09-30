@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33647825875640856}
   - component: {fileID: 135834980559401952}
   - component: {fileID: 23115324212974758}
-  - component: {fileID: 114098898912513302}
   - component: {fileID: 54718548560743740}
+  - component: {fileID: 114098898912513302}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 33899788966303978}
   - component: {fileID: 65673275593730548}
   - component: {fileID: 23738576623484940}
-  - component: {fileID: 114765290295920330}
   - component: {fileID: 54055360806833124}
+  - component: {fileID: 114465550839512852}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: 600
---- !u!114 &114765290295920330
+--- !u!114 &114465550839512852
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777e13a942ab04d4c9b50a2fe502963a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSpeed: 50
+  paddleSpeed: 0.5
 --- !u!135 &135834980559401952
 SphereCollider:
   m_ObjectHideFlags: 1
