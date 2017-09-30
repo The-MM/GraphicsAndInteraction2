@@ -15,11 +15,6 @@ public class Ball : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Use this for initialization
-    void Start () {
-        
-    }
-	
 	// Update is called once per frame
 	void Update () {
         if(Input.GetButtonDown("Fire1") && ballInPlay == false)

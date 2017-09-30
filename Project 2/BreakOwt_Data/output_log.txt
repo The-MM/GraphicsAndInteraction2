@@ -1,0 +1,47 @@
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     2018 MB
+    Driver:   21.21.13.7654
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.029 seconds
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\BreakOwt_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.438098 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 31f8 -> priority: 1 
+  Thread -> id: 2930 -> priority: 1 
+  Thread -> id: 28a4 -> priority: 1 
+  Thread -> id: 814 -> priority: 1 
+Scene 'MainScene' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 140)
+
+Scene 'MainScene' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 140)
+
+Scene 'MainScene' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 140)
+
