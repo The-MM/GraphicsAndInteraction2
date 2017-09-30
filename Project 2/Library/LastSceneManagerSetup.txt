@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Main Scene.unity
+- path: C:/Users/Michael/Documents/Uni/2017/Semester 2/Graphics and Interaction/Lab07/Lab07/Assets/MainScene.unity
   isLoaded: 1
   isActive: 1
