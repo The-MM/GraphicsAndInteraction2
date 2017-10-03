@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour {
     void ResetLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // The ball has gone out of play
