@@ -3,13 +3,30 @@ using System.Collections;
 
 public class HealthManager : MonoBehaviour {
 
-    /*
-    public GameObject createOnDestroy;
-    public int startingHealth = 100;
+    public const int RECTANGLE_HEALTH = 1;
+    public const int TRIANGLE_HEALTH = 2;
+    public const int CIRCLE_HEALTH = 3;
+
+    private int startingHealth;
     private int currentHealth;
 
 	// Use this for initialization
 	void Start () {
+
+        // Sets starting health based on brick type
+        switch (this.gameObject.GetComponent<Brick>().brickType)
+        {
+            case GameManager.BrickTypes.RECTANGLE:
+                startingHealth = RECTANGLE_HEALTH;
+                break;
+            case GameManager.BrickTypes.TRIANGLE:
+                startingHealth = TRIANGLE_HEALTH;
+                break;
+            case GameManager.BrickTypes.CIRCLE:
+                startingHealth = CIRCLE_HEALTH;
+                break;
+        }
+
         this.ResetHealthToStarting();
 	}
 
@@ -26,12 +43,13 @@ public class HealthManager : MonoBehaviour {
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            ScoreManager sm = GameObject.Find("Score").GetComponent<ScoreManager>();
-            sm.enemyKilled();
+            // Tell the GameManager the brick has been destroyed
+            GameManager.instance.DestroyedBrick(this.GetComponent<Brick>());
+
+            // Remove the brick and spawn death particles
             Destroy(this.gameObject);
-            GameObject obj = Instantiate(this.createOnDestroy);
+            GameObject obj = Instantiate(this.GetComponent<Brick>().createOnDestroy);
             obj.transform.position = this.transform.position;
-            
         }
     }
 
@@ -40,5 +58,5 @@ public class HealthManager : MonoBehaviour {
     {
         return this.currentHealth;
     }
-    */
+    
 }
