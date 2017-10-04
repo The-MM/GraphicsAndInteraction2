@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour {
     public GameObject deathParticles;
     public static GameManager instance = null;
 
+    public enum BrickTypes
+    {
+        RECTANGLE, TRIANGLE, CIRCLE
+    }
+
     private GameObject paddle;
 
     void Awake()
@@ -90,10 +95,14 @@ public class GameManager : MonoBehaviour {
         paddle = Instantiate(paddlePrefab, transform.position, Quaternion.identity) as GameObject;
     }
 
-
     // A brick has been destroyed
-    public void DestroyedBrick()
+    public void DestroyedBrick(Brick b)
     {
+        // Increase score
+        ScoreManager sm = ScoreManager.instance;
+        sm.DestroyedBrick(b.brickType);
+
+        // Check if game should end
         brickNum--;
         CheckGameOver();
     }
