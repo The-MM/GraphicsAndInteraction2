@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    private const float POWER_UP_CHANCE = 0.5f;
+
     public float resetDelay = 1f;
     public int brickNum = 20;
     public int lifeNum = 3;
@@ -15,6 +17,8 @@ public class GameManager : MonoBehaviour {
     public GameObject bricksPrefab;
     public GameObject paddlePrefab;
     public GameObject deathParticles;
+    public GameObject powerUpPrefab;
+
     public static GameManager instance = null;
 
     public enum BrickTypes
@@ -102,8 +106,21 @@ public class GameManager : MonoBehaviour {
         ScoreManager sm = ScoreManager.instance;
         sm.DestroyedBrick(b.brickType);
 
+        // Has a chance to drop a power up at the brick's position
+        if (Random.Range(0.0f, 1.0f) <= POWER_UP_CHANCE)
+        {
+            GameObject newPowerUp = Instantiate(powerUpPrefab, b.transform.position, Quaternion.identity);
+            newPowerUp.transform.Rotate(new Vector3(0.0f, 0.0f, 90.0f));
+        }
+
         // Check if game should end
         brickNum--;
         CheckGameOver();
+    }
+
+    // Generates a random int (placed in GameManager so there's only one seed instance)
+    public int RandomInt(int min, int max)
+    {
+        return Random.Range(min, max);
     }
 }

@@ -7,8 +7,12 @@ public class Brick : MonoBehaviour {
     public GameManager.BrickTypes brickType;
     public GameObject createOnDestroy;
 
-    void OnCollisionEnter(Collision ball)
+    // Collision with ball damages the brick
+    void OnCollisionEnter(Collision other)
     {
-        this.GetComponent<HealthManager>().ApplyDamage(ball.gameObject.GetComponent<Ball>().ballDamage);
+        if (!other.gameObject.GetComponent<Ball>().Equals(null))
+        {
+            this.GetComponent<HealthManager>().ApplyDamage(other.gameObject.GetComponent<Ball>().ballDamage);
+        }
     }
 }
