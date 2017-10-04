@@ -54,7 +54,7 @@ public class PowerUp : MonoBehaviour {
     // Randomly selects a power up type
     private PowerUpTypes PickType()
     {
-        int typeInt = GameManager.instance.RandomInt(0, TYPES_NUM - 1);
+        int typeInt = GameManager.instance.RandomInt(0, TYPES_NUM);
 
         switch (typeInt)
         {
@@ -63,7 +63,7 @@ public class PowerUp : MonoBehaviour {
             case 1:
                 return PowerUp.PowerUpTypes.SIZE_UP;
             case 2:
-                return PowerUp.PowerUpTypes.SIZE_UP;
+                return PowerUp.PowerUpTypes.SIZE_DOWN;
             case 3:
                 return PowerUp.PowerUpTypes.MAGNET;
             default:
