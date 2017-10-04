@@ -30,7 +30,7 @@ public class PaddleControl : MonoBehaviour {
     // Changes the paddle's width
     public void ScalePaddle(float scale)
     {
-        this.transform.localScale += new Vector3(0.0f, scale, 0.0f);
+        this.transform.localScale += new Vector3(scale, 0.0f, 0.0f);
     }
 
 }

@@ -82,8 +82,7 @@ public class GameManager : MonoBehaviour {
     // The ball has gone out of play
     public void Died()
     {
-        lifeNum--;
-        livesText.text = "Lives: " + lifeNum.ToString();
+        IncrementLife(-1);
         Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
 
         // Reset the paddle
@@ -91,6 +90,13 @@ public class GameManager : MonoBehaviour {
         Invoke("SetupPaddle", resetDelay);
 
         CheckGameOver();
+    }
+
+    // Changes the number of lives by a certain amount
+    public void IncrementLife(int n)
+    {
+        lifeNum += n;
+        livesText.text = "Lives: " + lifeNum.ToString();
     }
 
     // Instatiates new paddle

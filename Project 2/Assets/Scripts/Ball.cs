@@ -5,11 +5,9 @@ using UnityEngine;
 public class Ball : MonoBehaviour {
 
     public float initialVelocity = 600f;
-
     public int ballDamage = 1;
 
     private bool ballInPlay = false;
-
     private Rigidbody rb;
 
     void Awake()

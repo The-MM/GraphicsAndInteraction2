@@ -8,6 +8,11 @@ public class PowerUp : MonoBehaviour {
     private const float SIZE_UP_INCR = 0.5f;
     private const float SIZE_DOWN_INCR = -0.5f;
 
+    public Material plusLifeMat;
+    public Material sizeUpMat;
+    public Material sizeDownMat;
+    public Material magnetMat;
+
     private int TYPES_NUM = 4;
     public enum PowerUpTypes
     {
@@ -26,16 +31,16 @@ public class PowerUp : MonoBehaviour {
         switch (powerUpType)
         {
             case PowerUp.PowerUpTypes.PLUS_LIFE:
-                
+                this.GetComponent<Renderer>().material = plusLifeMat;
                 break;
             case PowerUp.PowerUpTypes.SIZE_UP:
-                
+                this.GetComponent<Renderer>().material = sizeUpMat;
                 break;
             case PowerUp.PowerUpTypes.SIZE_DOWN:
-                
+                this.GetComponent<Renderer>().material = sizeDownMat;
                 break;
             case PowerUp.PowerUpTypes.MAGNET:
-                
+                this.GetComponent<Renderer>().material = magnetMat;
                 break;
         }
     }
@@ -67,9 +72,9 @@ public class PowerUp : MonoBehaviour {
     }
 
     // Colliding with the paddle grants the effect
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.GetComponent<PaddleControl>().Equals(null))
+        if (!(other.gameObject.GetComponent<PaddleControl>().Equals(null)))
         {
             PaddleControl pc = other.gameObject.GetComponent<PaddleControl>();
 
@@ -77,7 +82,7 @@ public class PowerUp : MonoBehaviour {
             switch (powerUpType)
             {
                 case PowerUp.PowerUpTypes.PLUS_LIFE:
-                    GameManager.instance.lifeNum += 1;
+                    GameManager.instance.IncrementLife(1);
                     break;
                 case PowerUp.PowerUpTypes.SIZE_UP:
                     pc.ScalePaddle(SIZE_UP_INCR);
