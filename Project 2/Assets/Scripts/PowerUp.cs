@@ -16,7 +16,7 @@ public class PowerUp : MonoBehaviour {
     private int TYPES_NUM = 4;
     public enum PowerUpTypes
     {
-        PLUS_LIFE, SIZE_UP, SIZE_DOWN, MAGNET
+        PLUS_LIFE, SIZE_UP, SIZE_DOWN, MAGNET, POWER_BALL
     }
 
     private PowerUpTypes powerUpType;
@@ -74,7 +74,7 @@ public class PowerUp : MonoBehaviour {
     // Colliding with the paddle grants the effect
     void OnTriggerEnter(Collider other)
     {
-        if (!(other.gameObject.GetComponent<PaddleControl>().Equals(null)))
+        if (other.gameObject.GetComponent<PaddleControl>() != null)
         {
             PaddleControl pc = other.gameObject.GetComponent<PaddleControl>();
 
