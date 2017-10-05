@@ -47,11 +47,12 @@ public class Ball : MonoBehaviour {
     {
         if(!powerBallMode)
         {
-			
-			audio.Play();
             powerBallMode = true;
             endTime = Time.time + duration;
             ballDamage = POWER_BALL_DMG;
+
+            // Start music
+            audio.Play();
 
             // Ignore all brick collisions
             GameObject bricks = GameManager.instance.GetBricks();
@@ -78,7 +79,8 @@ public class Ball : MonoBehaviour {
         this.GetComponent<Collider>().isTrigger = false;
         ballDamage = NORMAL_BALL_DMG;
 
-		audio.Pause ();
+        // Stop music
+		audio.Stop();
 
         // Stops ignoring brick collisions
         GameObject bricks = GameManager.instance.GetBricks();
