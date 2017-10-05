@@ -121,10 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3f914e8ebc4bd43a794ae36fd0a208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plusLifeMat: {fileID: 2100000, guid: 825515e2fcecba84e875775b62da63cd, type: 2}
-  sizeUpMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
-  sizeDownMat: {fileID: 2100000, guid: ad954a73cd5540c43a7a4fc00ad4ed5b, type: 2}
-  magnetMat: {fileID: 2100000, guid: 904bccd5d2ba8584b9e5b2d57ae26d2b, type: 2}
+  plusLifeMat: {fileID: 2100000, guid: 2e5c4102250884ec1a397dccdf820550, type: 2}
+  sizeUpMat: {fileID: 2100000, guid: 825515e2fcecba84e875775b62da63cd, type: 2}
+  sizeDownMat: {fileID: 2100000, guid: 904bccd5d2ba8584b9e5b2d57ae26d2b, type: 2}
+  magnetMat: {fileID: 2100000, guid: af828079f417d482ba57647e7ae00a09, type: 2}
   powerBallMat: {fileID: 2100000, guid: e2d34358f426203498c8f5deb9cecded, type: 2}
 --- !u!136 &136780306453311762
 CapsuleCollider:
