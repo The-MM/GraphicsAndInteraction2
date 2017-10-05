@@ -17,6 +17,8 @@ public class Ball : MonoBehaviour {
     private Rigidbody rb;
     private float endTime;
 
+	public AudioSource audio;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,6 +47,8 @@ public class Ball : MonoBehaviour {
     {
         if(!powerBallMode)
         {
+			
+			audio.Play();
             powerBallMode = true;
             endTime = Time.time + duration;
             ballDamage = POWER_BALL_DMG;
@@ -73,6 +77,8 @@ public class Ball : MonoBehaviour {
     {
         this.GetComponent<Collider>().isTrigger = false;
         ballDamage = NORMAL_BALL_DMG;
+
+		audio.Pause ();
 
         // Stops ignoring brick collisions
         GameObject bricks = GameManager.instance.GetBricks();
