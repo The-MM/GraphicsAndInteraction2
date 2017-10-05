@@ -74,7 +74,6 @@ Shader "Unlit/PhongShader"
 				// Transform vertex in world coordinates to camera coordinates
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 
-<<<<<<< HEAD
 				// Change the colour of the vertex based on height:
 				// Snowy peaks
 				if(worldVertex.y > 250) {
@@ -97,41 +96,6 @@ Shader "Unlit/PhongShader"
 					o.color = float4(0.0f, 0.5f, 1.0f, 0.0f);
 				}
 
-=======
-				// Change the colour of the vertex based on height (appears rainbow coloured repeating):
-				float4 colourRGBA;
-				// Red
-				if(abs(worldVertex.y % 7) <= 1) {
-					colourRGBA = float4(255.0f, 0.0f, 0.0f, 0.0f);
-				}
-				// Orange
-				else if(abs(worldVertex.y % 7) <= 2) {
-					colourRGBA = float4(255.0f, 127.0f, 0.0f, 0.0f);
-				}
-				// Yellow
-				else if(abs(worldVertex.y % 7) <= 3) {
-					colourRGBA = float4(255.0f, 255.0f, 0.0f, 0.0f);
-				}
-				// Green
-				else if(abs(worldVertex.y % 7) <= 4) {
-					colourRGBA = float4(0.0f, 255.0f, 0.0f, 0.0f);
-				}
-				// Blue
-				else if(abs(worldVertex.y % 7) <= 5) {
-					colourRGBA = float4(0.0f, 0.0f, 255.0f, 0.0f);
-				}
-				// Indigo
-				else if(abs(worldVertex.y % 7) <= 6) {
-					colourRGBA = float4(75.0f, 0.0f, 130.0f, 0.0f);
-				}
-				// Violet
-				else {
-					colourRGBA = float4(139.0f, 0.0f, 255.0f, 0.0f);
-				}
-
-				o.color = float4(colourRGBA.r/255.0f, colourRGBA.g/255.0f, colourRGBA.b/255.0f, colourRGBA.a/255.0f);
-
->>>>>>> master
 				// Pass out the world vertex position and world normal to be interpolated
 				// in the fragment shader (and utilised)
 				o.worldNormal = worldNormal;
