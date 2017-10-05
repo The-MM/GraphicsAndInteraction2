@@ -7,13 +7,15 @@ public class PowerUp : MonoBehaviour {
     private const float FALL_SPEED = 0.1f;
     private const float SIZE_UP_INCR = 0.5f;
     private const float SIZE_DOWN_INCR = -0.5f;
+    private const float POWER_BALL_DURATION = 3f;
 
     public Material plusLifeMat;
     public Material sizeUpMat;
     public Material sizeDownMat;
     public Material magnetMat;
+    public Material powerBallMat;
 
-    private int TYPES_NUM = 4;
+    private int TYPES_NUM = 5;
     public enum PowerUpTypes
     {
         PLUS_LIFE, SIZE_UP, SIZE_DOWN, MAGNET, POWER_BALL
@@ -42,6 +44,9 @@ public class PowerUp : MonoBehaviour {
             case PowerUp.PowerUpTypes.MAGNET:
                 this.GetComponent<Renderer>().material = magnetMat;
                 break;
+            case PowerUp.PowerUpTypes.POWER_BALL:
+                this.GetComponent<Renderer>().material = powerBallMat;
+                break;
         }
     }
 	
@@ -66,6 +71,8 @@ public class PowerUp : MonoBehaviour {
                 return PowerUp.PowerUpTypes.SIZE_DOWN;
             case 3:
                 return PowerUp.PowerUpTypes.MAGNET;
+            case 4:
+                return PowerUp.PowerUpTypes.POWER_BALL;
             default:
                 return PowerUp.PowerUpTypes.PLUS_LIFE;
         }
@@ -92,6 +99,9 @@ public class PowerUp : MonoBehaviour {
                     break;
                 case PowerUp.PowerUpTypes.MAGNET:
                     //TODO Magnetise
+                    break;
+                case PowerUp.PowerUpTypes.POWER_BALL:
+                    GameManager.instance.GetBall().GetComponent<Ball>().PowerModeOn(POWER_BALL_DURATION);
                     break;
             }
 

@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private GameObject paddle;
+    private GameObject ball;
+    private GameObject bricks;
 
     void Awake()
     {
@@ -48,7 +50,7 @@ public class GameManager : MonoBehaviour {
     void InitialSetup()
     {
         SetupPaddle();
-        Instantiate(bricksPrefab, transform.position, Quaternion.identity);
+        bricks = Instantiate(bricksPrefab, transform.position, Quaternion.identity);
     }
 
     // Win or lose conditions checked
@@ -103,6 +105,7 @@ public class GameManager : MonoBehaviour {
     void SetupPaddle()
     {
         paddle = Instantiate(paddlePrefab, transform.position, Quaternion.identity) as GameObject;
+        ball = paddle.transform.GetChild(0).gameObject;
     }
 
     // A brick has been destroyed
@@ -128,5 +131,20 @@ public class GameManager : MonoBehaviour {
     public int RandomInt(int min, int max)
     {
         return Random.Range(min, max);
+    }
+
+    public GameObject GetPaddle()
+    {
+        return this.paddle;
+    }
+
+    public GameObject GetBall()
+    {
+        return this.ball;
+    }
+
+    public GameObject GetBricks()
+    {
+        return this.bricks;
     }
 }

@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
+    private const int NORMAL_BALL_DMG = 1;
+    private const int POWER_BALL_DMG = 3;
+
     public float initialVelocity = 600f;
-    public int ballDamage = 1;
+    public int ballDamage = NORMAL_BALL_DMG;
 
     private bool ballInPlay = false;
+    private bool powerBallMode = false;
     private Rigidbody rb;
+    private float endTime;
 
     void Awake()
     {
@@ -17,6 +22,8 @@ public class Ball : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        // Fire the ball
         if(Input.GetButtonDown("Fire1") && ballInPlay == false)
         {
             transform.parent = null;
@@ -24,5 +31,52 @@ public class Ball : MonoBehaviour {
             rb.isKinematic = false;
             rb.AddForce(new Vector3(initialVelocity, initialVelocity, 0.0f));
         }
+
+        if (powerBallMode && Time.time >= endTime)
+        {
+            this.PowerModeOff();
+        }
+    }
+
+    // Makes the ball go into power ball mode for a certain time duration
+    public void PowerModeOn(float duration)
+    {
+        if(!powerBallMode)
+        {
+            powerBallMode = true;
+            endTime = Time.time + duration;
+            ballDamage = POWER_BALL_DMG;
+
+            // Ignore all brick collisions
+            GameObject bricks = GameManager.instance.GetBricks();
+            for (int i = 0; i < bricks.transform.childCount; i++)
+            {
+                GameObject child = GameManager.instance.GetBricks().transform.GetChild(i).gameObject;
+                child.GetComponent<BoxCollider>().isTrigger = true;
+            }
+        }
+
+        // Refresh timer if already on
+        else
+        {
+            endTime = Time.time + duration;
+        }
+    }
+
+    // Turns off power ball mode
+    public void PowerModeOff()
+    {
+        this.GetComponent<SphereCollider>().isTrigger = false;
+        ballDamage = NORMAL_BALL_DMG;
+
+        // Stops ignoring brick collisions
+        GameObject bricks = GameManager.instance.GetBricks();
+        for (int i = 0; i < bricks.transform.childCount; i++)
+        {
+            GameObject child = GameManager.instance.GetBricks().transform.GetChild(i).gameObject;
+            child.GetComponent<BoxCollider>().isTrigger = false;
+        }
+
+        powerBallMode = false;
     }
 }
