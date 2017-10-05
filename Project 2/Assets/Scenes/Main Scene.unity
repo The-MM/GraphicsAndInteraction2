@@ -481,6 +481,7 @@ MonoBehaviour:
   livesText: {fileID: 1708088138}
   gameOver: {fileID: 1951555188}
   youWin: {fileID: 213367368}
+  pointLightPrefab: {fileID: 0}
   bricksPrefab: {fileID: 1477676674251986, guid: 4b0049f8725e3473d8237738b4c84461,
     type: 2}
   paddlePrefab: {fileID: 1396386759562394, guid: 1cf1e70b47e440f45b2ba7d5240824b4,
@@ -3929,7 +3930,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1157216994}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 13.39, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -74,27 +74,38 @@ Shader "Unlit/PhongShader"
 				// Transform vertex in world coordinates to camera coordinates
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 
-				// Change the colour of the vertex based on height:
-				// Snowy peaks
-				if(worldVertex.y > 250) {
-					o.color = float4(1.0f, 1.0f, 1.0f, 0.0f);
+				// Change the colour of the vertex based on height (appears rainbow coloured repeating):
+				float4 colourRGBA;
+				// Red
+				if(abs(worldVertex.y % 7) <= 1) {
+					colourRGBA = float4(255.0f, 0.0f, 0.0f, 0.0f);
 				}
-				// Brown midsections
-				else if(worldVertex.y > 150) {
-					o.color = float4(0.199f, 0.398f, 0.0f, 0.0f);
+				// Orange
+				else if(abs(worldVertex.y % 7) <= 2) {
+					colourRGBA = float4(255.0f, 127.0f, 0.0f, 0.0f);
 				}
-				// Green bases
-				else if(worldVertex.y > 5) {
-					o.color = float4(0.0f, 1.0f, 0.0f, 0.0f);
+				// Yellow
+				else if(abs(worldVertex.y % 7) <= 3) {
+					colourRGBA = float4(255.0f, 255.0f, 0.0f, 0.0f);
 				}
-				// Sandy beaches
-				else if(worldVertex.y > 0) {
-					o.color = float4(0.895f, 1.0f, 0.797f, 0.0f);
+				// Green
+				else if(abs(worldVertex.y % 7) <= 4) {
+					colourRGBA = float4(0.0f, 255.0f, 0.0f, 0.0f);
 				}
-				// Blue ocean
+				// Blue
+				else if(abs(worldVertex.y % 7) <= 5) {
+					colourRGBA = float4(0.0f, 0.0f, 255.0f, 0.0f);
+				}
+				// Indigo
+				else if(abs(worldVertex.y % 7) <= 6) {
+					colourRGBA = float4(75.0f, 0.0f, 130.0f, 0.0f);
+				}
+				// Violet
 				else {
-					o.color = float4(0.0f, 0.5f, 1.0f, 0.0f);
+					colourRGBA = float4(139.0f, 0.0f, 255.0f, 0.0f);
 				}
+
+				o.color = float4(colourRGBA.r/255.0f, colourRGBA.g/255.0f, colourRGBA.b/255.0f, colourRGBA.a/255.0f);
 
 				// Pass out the world vertex position and world normal to be interpolated
 				// in the fragment shader (and utilised)
