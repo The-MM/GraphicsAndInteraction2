@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114155696226617626
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114166830298969546

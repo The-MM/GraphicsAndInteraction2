@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
 
-    private const float FALL_SPEED = 0.1f;
+    private const float FALL_SPEED = 4f;
+    private const float ROLL_SPEED = 100f;
     private const float SIZE_UP_INCR = 0.5f;
     private const float SIZE_DOWN_INCR = -0.5f;
     private const float POWER_BALL_DURATION = 3f;
@@ -50,11 +51,12 @@ public class PowerUp : MonoBehaviour {
         }
     }
 	
-	// Floats down towards player
+	// Rolls down towards player
 	void Update () {
-        Vector3 pos = this.gameObject.transform.position;
-        this.gameObject.transform.position = new Vector3(pos.x, pos.y - FALL_SPEED, pos.z);
-	}
+        
+        this.gameObject.transform.Rotate(Vector3.up, ROLL_SPEED * Time.deltaTime);
+        this.gameObject.transform.Translate(new Vector3(0.0f, -FALL_SPEED * Time.deltaTime, 0.0f), Space.World);
+    }
 
     // Randomly selects a power up type
     private PowerUpTypes PickType()
