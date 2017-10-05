@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 119996563}
   - component: {fileID: 119996567}
   m_Layer: 0
-  m_Name: Water
+  m_Name: OutOfPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,6 +551,8 @@ MonoBehaviour:
   paddlePrefab: {fileID: 1396386759562394, guid: 1cf1e70b47e440f45b2ba7d5240824b4,
     type: 2}
   deathParticles: {fileID: 1034617853304756, guid: f893a2e164cd05a4eaadc38cede511c8,
+    type: 2}
+  powerUpPrefab: {fileID: 1824425863397088, guid: 604c3afe63504e74892173f1f2ec8f64,
     type: 2}
 --- !u!4 &707090576
 Transform:
