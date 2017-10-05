@@ -7,8 +7,21 @@ public class Brick : MonoBehaviour {
     public GameManager.BrickTypes brickType;
     public GameObject createOnDestroy;
 
-    void OnCollisionEnter(Collision ball)
+    // Collision with ball damages the brick
+    void OnCollisionEnter(Collision other)
     {
-        this.GetComponent<HealthManager>().ApplyDamage(ball.gameObject.GetComponent<Ball>().ballDamage);
+        if (other.gameObject.GetComponent<Ball>() != null)
+        {
+            this.GetComponent<HealthManager>().ApplyDamage(other.gameObject.GetComponent<Ball>().ballDamage);
+        }
+    }
+    
+    // Used for power ball mode (when bricks are triggers)
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Ball>() != null)
+        {
+            this.GetComponent<HealthManager>().ApplyDamage(other.gameObject.GetComponent<Ball>().ballDamage);
+        }
     }
 }
