@@ -85,10 +85,14 @@ public class GameManager : MonoBehaviour {
     // The ball has gone out of play
     public void Died()
     {
+        // Decrease lives
         IncrementLife(-1);
-        Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
+
+        // Turn off power ball mode
+        ball.GetComponent<Ball>().PowerModeOff();
 
         // Reset the paddle
+        Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
         Destroy(paddle);
         Invoke("SetupPaddle", resetDelay);
 
