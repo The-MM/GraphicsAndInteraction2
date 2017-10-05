@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     public Text livesText;
     public Text gameOver;
     public Text youWin;
+    public GameObject pointLightPrefab;
     public GameObject bricksPrefab;
     public GameObject paddlePrefab;
     public GameObject deathParticles;
@@ -84,10 +85,19 @@ public class GameManager : MonoBehaviour {
     // The ball has gone out of play
     public void Died()
     {
+<<<<<<< HEAD
         IncrementLife(-1);
         Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
+=======
+        // Decrease lives
+        IncrementLife(-1);
+
+        // Turn off power ball mode
+        ball.GetComponent<Ball>().PowerModeOff();
+>>>>>>> master
 
         // Reset the paddle
+        Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
         Destroy(paddle);
         Invoke("SetupPaddle", resetDelay);
 

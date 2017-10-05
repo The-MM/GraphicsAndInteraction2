@@ -9,6 +9,11 @@ public class Ball : MonoBehaviour {
 
     public float initialVelocity = 600f;
     public int ballDamage = NORMAL_BALL_DMG;
+<<<<<<< HEAD
+=======
+    public Material ballMat;
+    public Material rainbowMat;
+>>>>>>> master
 
     private bool ballInPlay = false;
     private bool powerBallMode = false;
@@ -52,8 +57,16 @@ public class Ball : MonoBehaviour {
             for (int i = 0; i < bricks.transform.childCount; i++)
             {
                 GameObject child = GameManager.instance.GetBricks().transform.GetChild(i).gameObject;
+<<<<<<< HEAD
                 child.GetComponent<BoxCollider>().isTrigger = true;
             }
+=======
+                child.GetComponent<Collider>().isTrigger = true;
+            }
+
+            // Turn on rainbow lighting
+            this.GetComponent<Renderer>().material = rainbowMat;
+>>>>>>> master
         }
 
         // Refresh timer if already on
@@ -66,7 +79,11 @@ public class Ball : MonoBehaviour {
     // Turns off power ball mode
     public void PowerModeOff()
     {
+<<<<<<< HEAD
         this.GetComponent<SphereCollider>().isTrigger = false;
+=======
+        this.GetComponent<Collider>().isTrigger = false;
+>>>>>>> master
         ballDamage = NORMAL_BALL_DMG;
 
         // Stops ignoring brick collisions
@@ -74,9 +91,18 @@ public class Ball : MonoBehaviour {
         for (int i = 0; i < bricks.transform.childCount; i++)
         {
             GameObject child = GameManager.instance.GetBricks().transform.GetChild(i).gameObject;
+<<<<<<< HEAD
             child.GetComponent<BoxCollider>().isTrigger = false;
         }
 
+=======
+            child.GetComponent<Collider>().isTrigger = false;
+        }
+
+        // Turn off rainbow lighting
+        this.GetComponent<Renderer>().material = ballMat;
+
+>>>>>>> master
         powerBallMode = false;
     }
 }
