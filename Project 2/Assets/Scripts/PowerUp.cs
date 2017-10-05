@@ -8,7 +8,7 @@ public class PowerUp : MonoBehaviour {
     private const float ROLL_SPEED = 100f;
     private const float SIZE_UP_INCR = 0.5f;
     private const float SIZE_DOWN_INCR = -0.5f;
-    private const float POWER_BALL_DURATION = 3f;
+    private const float POWER_BALL_DURATION = 8f;
 
     public Material plusLifeMat;
     public Material sizeUpMat;
