@@ -566,10 +566,10 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 4
     enabled: 1
-    type: 4
-    angle: 25
+    type: 5
+    angle: 30
     length: 5
-    boxX: 1
+    boxX: 2
     boxY: 1
     boxZ: 1
     radius:
@@ -672,8 +672,8 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    randomDirectionAmount: 0
-    sphericalDirectionAmount: 0
+    randomDirectionAmount: 0.25
+    sphericalDirectionAmount: 0.25
   EmissionModule:
     enabled: 1
     serializedVersion: 4
@@ -2516,11 +2516,11 @@ ParticleSystem:
     maxLights: 20
   TrailModule:
     enabled: 1
-    ratio: 1
+    ratio: 0.5
     lifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.075
+      scalar: 0.05
       minScalar: 0.02
       maxCurve:
         serializedVersion: 2
