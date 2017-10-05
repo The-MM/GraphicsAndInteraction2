@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -481,7 +481,7 @@ MonoBehaviour:
   livesText: {fileID: 1708088138}
   gameOver: {fileID: 1951555188}
   youWin: {fileID: 213367368}
-  bricksPrefab: {fileID: 1830275094222830, guid: f6ff792b67fa16b4f8c56b23b6c9abaa,
+  bricksPrefab: {fileID: 1477676674251986, guid: 4b0049f8725e3473d8237738b4c84461,
     type: 2}
   paddlePrefab: {fileID: 1396386759562394, guid: 1cf1e70b47e440f45b2ba7d5240824b4,
     type: 2}
@@ -3983,7 +3983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
