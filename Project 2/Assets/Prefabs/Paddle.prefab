@@ -404,7 +404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867fd7f3b97af9a47a8b21932ffdda5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialVelocity: 600
+  initialVelocityEasy: 300
+  initialVelocityMed: 600
+  initialVelocityHard: 1000
   ballDamage: 1
   ballMat: {fileID: 2100000, guid: e276e4728929c4365a80fb4393c0a392, type: 2}
   rainbowMat: {fileID: 2100000, guid: e2d34358f426203498c8f5deb9cecded, type: 2}

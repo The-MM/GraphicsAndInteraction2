@@ -7,7 +7,9 @@ public class Ball : MonoBehaviour {
     private const int NORMAL_BALL_DMG = 1;
     private const int POWER_BALL_DMG = 3;
 
-    public float initialVelocity = 600f;
+    public float initialVelocityEasy = 300f;
+    public float initialVelocityMed = 600f;
+    public float initialVelocityHard = 1000f;
     public int ballDamage = NORMAL_BALL_DMG;
     public Material ballMat;
     public Material rainbowMat;
@@ -33,7 +35,22 @@ public class Ball : MonoBehaviour {
             transform.parent = null;
             ballInPlay = true;
             rb.isKinematic = false;
-            rb.AddForce(new Vector3(initialVelocity, initialVelocity, 0.0f));
+
+            // Changes ball speed based on the difficulty level
+            int difficulty = PlayerPrefs.GetInt("Difficulty Level");
+            if (difficulty == 0)
+            {
+                rb.AddForce(new Vector3(initialVelocityEasy, initialVelocityEasy, 0.0f));
+            }
+            else if (difficulty == 1)
+            {
+                rb.AddForce(new Vector3(initialVelocityMed, initialVelocityMed, 0.0f));
+            }
+            else if (difficulty == 2)
+            {
+                rb.AddForce(new Vector3(initialVelocityHard, initialVelocityHard, 0.0f));
+            }
+
         }
 
         if (powerBallMode && Time.time >= powerEndTime)
