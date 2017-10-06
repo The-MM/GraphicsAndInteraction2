@@ -12,10 +12,10 @@ public class Ball : MonoBehaviour {
     public Material ballMat;
     public Material rainbowMat;
 
-    private bool ballInPlay = false;
+    public bool ballInPlay = false;
     private bool powerBallMode = false;
     private Rigidbody rb;
-    private float endTime;
+    private float powerEndTime;
 
 	public AudioSource audio;
 
@@ -36,7 +36,7 @@ public class Ball : MonoBehaviour {
             rb.AddForce(new Vector3(initialVelocity, initialVelocity, 0.0f));
         }
 
-        if (powerBallMode && Time.time >= endTime)
+        if (powerBallMode && Time.time >= powerEndTime)
         {
             this.PowerModeOff();
         }
@@ -50,7 +50,7 @@ public class Ball : MonoBehaviour {
 			
 			audio.Play();
             powerBallMode = true;
-            endTime = Time.time + duration;
+            powerEndTime = Time.time + duration;
             ballDamage = POWER_BALL_DMG;
 
             // Ignore all brick collisions
@@ -68,7 +68,7 @@ public class Ball : MonoBehaviour {
         // Refresh timer if already on
         else
         {
-            endTime = Time.time + duration;
+            powerEndTime = Time.time + duration;
         }
     }
 

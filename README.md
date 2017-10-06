@@ -9,3 +9,6 @@ https://unity3d.com/learn/tutorials/topics/user-interface-ui/creating-main-menu
 
 Mario Kart theme music sourced from: 
 https://www.youtube.com/watch?v=XGRhb4z526Y
+
+Magnet SFX sourced from:
+https://www.youtube.com/watch?v=QEyEs9NqLEQ
