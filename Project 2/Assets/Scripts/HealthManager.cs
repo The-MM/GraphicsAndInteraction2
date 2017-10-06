@@ -10,8 +10,12 @@ public class HealthManager : MonoBehaviour {
     private int startingHealth;
     private int currentHealth;
 
-	// Use this for initialization
-	void Start () {
+    public Material highHealthMat;
+    public Material medHealthMat;
+    public Material lowHealthMat;
+
+    // Use this for initialization
+    void Start () {
 
         // Sets starting health based on brick type
         switch (this.gameObject.GetComponent<Brick>().brickType)
@@ -50,6 +54,23 @@ public class HealthManager : MonoBehaviour {
             Destroy(this.gameObject);
             GameObject obj = Instantiate(this.GetComponent<Brick>().createOnDestroy);
             obj.transform.position = this.transform.position;
+        }
+
+        else
+        {
+            // Darkens the brick for lower health
+            switch (currentHealth)
+            {
+                case 3:
+                    this.GetComponent<Renderer>().material = highHealthMat;
+                    break;
+                case 2:
+                    this.GetComponent<Renderer>().material = medHealthMat;
+                    break;
+                case 1:
+                    this.GetComponent<Renderer>().material = lowHealthMat;
+                    break;
+            }
         }
     }
 
