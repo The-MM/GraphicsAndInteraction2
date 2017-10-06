@@ -12,3 +12,7 @@ https://www.youtube.com/watch?v=XGRhb4z526Y
 
 Menu and Level music sourced from:
 www.bensound.com
+
+Magnet SFX sourced from:
+https://www.youtube.com/watch?v=QEyEs9NqLEQ
+
