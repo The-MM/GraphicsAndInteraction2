@@ -131,6 +131,11 @@ public class GameManager : MonoBehaviour {
         CheckGameOver();
     }
 
+    public void LoadScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
     // Generates a random int (placed in GameManager so there's only one seed instance)
     public int RandomInt(int min, int max)
     {
