@@ -506,7 +506,7 @@ Transform:
   m_GameObject: {fileID: 1997285621414738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.25, y: 2.81, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4059925870332004}
   m_RootOrder: 4
@@ -519,7 +519,7 @@ Transform:
   m_GameObject: {fileID: 1891144729300722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.22, y: 2.81, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4059925870332004}
   m_RootOrder: 12
@@ -545,7 +545,7 @@ Transform:
   m_GameObject: {fileID: 1005655209768374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.56, y: 7.9, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4059925870332004}
   m_RootOrder: 16
@@ -558,7 +558,7 @@ Transform:
   m_GameObject: {fileID: 1101683351115922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.38, y: 7.9, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4059925870332004}
   m_RootOrder: 0
@@ -597,7 +597,7 @@ Transform:
   m_GameObject: {fileID: 1484735140632474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.04, y: 7.9, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4059925870332004}
   m_RootOrder: 8
@@ -1400,7 +1400,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1101683351115922}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33452667593496314
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1428,7 +1428,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997285621414738}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33688668229030356
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1442,14 +1442,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484735140632474}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33707460499751400
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891144729300722}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33750807658215816
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1470,7 +1470,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005655209768374}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33827794911129330
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114077376810635244
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114291132297608584
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114293644567368258
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114399024891098476
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedd27d3ebfcc5a4c8a1f54c68ed10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickType: 0
+  brickType: 2
   createOnDestroy: {fileID: 1034617853304756, guid: e2688860f0ee05249ac2098ab7908c5e,
     type: 2}
 --- !u!114 &114717122438179388
