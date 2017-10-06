@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    private const float POWER_UP_CHANCE = 0.5f;
+    private const float POWER_UP_CHANCE = 1f;
 
     public float resetDelay = 1f;
     public int brickNum = 20;

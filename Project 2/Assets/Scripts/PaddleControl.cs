@@ -6,6 +6,7 @@ public class PaddleControl : MonoBehaviour {
 
     public float paddleSpeed = 10f;
     public AudioSource magnetAudio;
+    public GameObject magnetParticlePrefab;
     public static PaddleControl instance = null;
 
     private Vector3 paddlePosition = new Vector3(0.0f, -9.5f, 0.0f);
@@ -49,9 +50,17 @@ public class PaddleControl : MonoBehaviour {
             magnetMode = true;
             magnetEndTime = Time.time + duration;
 
-            // Turns on magnet sound and effects
+            // Turns on magnet sound and effects (check both children)
             magnetAudio.Play();
-            //TODO
+            if(this.transform.GetChild(0).name == "Magnet Particles")
+            {
+                this.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+            }
+            else
+            {
+                this.transform.GetChild(1).GetComponent<ParticleSystem>().Play();
+            }
+            
         }
 
         // Refresh timer if already on
@@ -75,7 +84,14 @@ public class PaddleControl : MonoBehaviour {
     {
         // Turn off magnet sound and effects
         magnetAudio.Stop();
-        //TODO
+        if (this.transform.GetChild(0).name == "Magnet Particles")
+        {
+            this.transform.GetChild(0).GetComponent<ParticleSystem>().Stop();
+        }
+        else
+        {
+            this.transform.GetChild(1).GetComponent<ParticleSystem>().Stop();
+        }
 
         magnetMode = false;
     }
