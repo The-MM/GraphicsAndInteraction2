@@ -39,7 +39,28 @@ public class PaddleControl : MonoBehaviour {
     // Changes the paddle's width
     public void ScalePaddle(float scale)
     {
+        // Stores values for unscaling later
+        List<Vector3> childrenScale = new List<Vector3>();
+        foreach (Transform child in this.transform)
+        {
+            childrenScale.Add(child.transform.localScale);
+        }
+        float parentX = this.transform.localScale.x;
+
+        // Scales the paddle
         this.transform.localScale += new Vector3(scale, 0.0f, 0.0f);
+
+        // Unscales the ball (using crazy maths I made)
+        // For some reason the particle effect does not need unscaling
+        int i = 0;
+        foreach (Transform child in this.transform)
+        {
+            if(child.gameObject.name == "Ball")
+            {
+                child.transform.localScale = new Vector3((parentX * childrenScale[i].x) / (this.transform.localScale.x), childrenScale[i].y, childrenScale[i].z);
+            }
+            i++;
+        }
     }
 
     // For a duration, sticks the ball to the paddle on contact
