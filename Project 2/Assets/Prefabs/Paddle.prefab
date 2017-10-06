@@ -293,7 +293,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -375,8 +375,8 @@ MonoBehaviour:
   ballDamage: 1
   ballMat: {fileID: 2100000, guid: e276e4728929c4365a80fb4393c0a392, type: 2}
   rainbowMat: {fileID: 2100000, guid: e2d34358f426203498c8f5deb9cecded, type: 2}
+  powerBallAudio: {fileID: 82864078447366412}
   ballInPlay: 0
-  audio: {fileID: 82864078447366412}
 --- !u!114 &114465550839512852
 MonoBehaviour:
   m_ObjectHideFlags: 1

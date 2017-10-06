@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour {
     public Text livesText;
     public Text gameOver;
     public Text youWin;
-    public GameObject pointLightPrefab;
     public GameObject bricksPrefab;
     public GameObject paddlePrefab;
     public GameObject deathParticles;
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour {
         livesText.text = "Lives: " + lifeNum.ToString();
     }
 
-    // Sets up paddle and bricks
+    // Sets up paddle and bricks and music
     void InitialSetup()
     {
         SetupPaddle();

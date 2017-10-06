@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour {
     private Rigidbody rb;
     private float powerEndTime;
 
-	public AudioSource audio;
+	public AudioSource powerBallAudio;
 
     void Awake()
     {
@@ -47,11 +47,13 @@ public class Ball : MonoBehaviour {
     {
         if(!powerBallMode)
         {
-			
-			audio.Play();
             powerBallMode = true;
             powerEndTime = Time.time + duration;
             ballDamage = POWER_BALL_DMG;
+
+            // Swap music
+            GameManager.instance.GetComponent<AudioSource>().Pause();
+            powerBallAudio.Play();
 
             // Ignore all brick collisions
             GameObject bricks = GameManager.instance.GetBricks();
@@ -78,7 +80,9 @@ public class Ball : MonoBehaviour {
         this.GetComponent<Collider>().isTrigger = false;
         ballDamage = NORMAL_BALL_DMG;
 
-		audio.Pause ();
+        // Swap music back
+		powerBallAudio.Stop();
+        GameManager.instance.GetComponent<AudioSource>().UnPause();
 
         // Stops ignoring brick collisions
         GameObject bricks = GameManager.instance.GetBricks();
