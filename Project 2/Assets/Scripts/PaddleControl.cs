@@ -6,6 +6,7 @@ public class PaddleControl : MonoBehaviour {
 
     public float paddleSpeed = 10f;
     public AudioSource magnetAudio;
+    public GameObject magnetParticlePrefab;
     public static PaddleControl instance = null;
 
     private Vector3 paddlePosition = new Vector3(0.0f, -9.5f, 0.0f);
@@ -38,7 +39,28 @@ public class PaddleControl : MonoBehaviour {
     // Changes the paddle's width
     public void ScalePaddle(float scale)
     {
+        // Stores values for unscaling later
+        List<Vector3> childrenScale = new List<Vector3>();
+        foreach (Transform child in this.transform)
+        {
+            childrenScale.Add(child.transform.localScale);
+        }
+        float parentX = this.transform.localScale.x;
+
+        // Scales the paddle
         this.transform.localScale += new Vector3(scale, 0.0f, 0.0f);
+
+        // Unscales the ball (using crazy maths I made)
+        // For some reason the particle effect does not need unscaling
+        int i = 0;
+        foreach (Transform child in this.transform)
+        {
+            if(child.gameObject.name == "Ball")
+            {
+                child.transform.localScale = new Vector3((parentX * childrenScale[i].x) / (this.transform.localScale.x), childrenScale[i].y, childrenScale[i].z);
+            }
+            i++;
+        }
     }
 
     // For a duration, sticks the ball to the paddle on contact
@@ -49,9 +71,17 @@ public class PaddleControl : MonoBehaviour {
             magnetMode = true;
             magnetEndTime = Time.time + duration;
 
-            // Turns on magnet sound and effects
+            // Turns on magnet sound and effects (check both children)
             magnetAudio.Play();
-            //TODO
+            if(this.transform.GetChild(0).name == "Magnet Particles")
+            {
+                this.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+            }
+            else
+            {
+                this.transform.GetChild(1).GetComponent<ParticleSystem>().Play();
+            }
+            
         }
 
         // Refresh timer if already on
@@ -75,7 +105,14 @@ public class PaddleControl : MonoBehaviour {
     {
         // Turn off magnet sound and effects
         magnetAudio.Stop();
-        //TODO
+        if (this.transform.GetChild(0).name == "Magnet Particles")
+        {
+            this.transform.GetChild(0).GetComponent<ParticleSystem>().Stop();
+        }
+        else
+        {
+            this.transform.GetChild(1).GetComponent<ParticleSystem>().Stop();
+        }
 
         magnetMode = false;
     }

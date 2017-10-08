@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    private const float POWER_UP_CHANCE = 0.5f;
+    private const float POWER_UP_CHANCE = 1f;
 
     public float resetDelay = 1f;
     public int brickNum = 20;
@@ -129,6 +129,11 @@ public class GameManager : MonoBehaviour {
         // Check if game should end
         brickNum--;
         CheckGameOver();
+    }
+
+    public void LoadScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 
     // Generates a random int (placed in GameManager so there's only one seed instance)
