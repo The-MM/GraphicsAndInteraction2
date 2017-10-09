@@ -59,16 +59,23 @@ public class GameManager : MonoBehaviour {
         if (brickNum <= 0)
         {
             youWin.gameObject.SetActive(true);
-            //Slow-mo
+
+            // Slow-mo
             Time.timeScale = .25f;
+
             Invoke("LoadNextLevel", resetDelay);
         }
 
         if (lifeNum <= 0)
         {
+
             gameOver.gameObject.SetActive(true);
-            //Slow-mo
+
+            // Slow-mo
             Time.timeScale = .25f;
+
+            // Score gets reset
+            ScoreManager.instance.ResetScore();
             Invoke("ResetLevel", resetDelay);
         }
 

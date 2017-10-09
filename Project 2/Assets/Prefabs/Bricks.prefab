@@ -1764,6 +1764,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114079503869084206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1803,6 +1806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114133950794168318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1814,6 +1820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114142545796598624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1937,6 +1946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114322546200320454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1948,6 +1960,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114350198309141328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1973,6 +1988,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114382843623789764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2012,6 +2030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114442485069875150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2037,6 +2058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114511867856093244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2048,6 +2072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114621933117750376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2087,6 +2114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114754579106922158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2098,6 +2128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114773358045708086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2123,6 +2156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114782580287104896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2134,6 +2170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114850933355695512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2159,6 +2198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114881367534640518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2170,6 +2212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114881924185957030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2181,6 +2226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114902456966410994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2192,6 +2240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114903398873646210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2217,6 +2268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114986951316040838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2228,6 +2282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
 --- !u!114 &114996192579470272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2239,3 +2296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfb06e622661f4f959fa0d612b9123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highHealthMat: {fileID: 2100000, guid: b3db42f50ee7e7443980b104818a2b7a, type: 2}
+  medHealthMat: {fileID: 2100000, guid: f3b0fa6d63e804b4ba93027ea4c9e551, type: 2}
+  lowHealthMat: {fileID: 2100000, guid: 8e52d5e05363ad2469c1b077f2197042, type: 2}
