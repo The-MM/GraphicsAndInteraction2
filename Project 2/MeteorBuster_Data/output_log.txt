@@ -1,0 +1,44 @@
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+    Driver:   22.21.13.8205
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Michael\Documents\Uni\2017\Semester 2\Graphics and Interaction\GraphicsAndInteraction2\Project 2\MeteorBuster_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.198397 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 3c60 -> priority: 1 
+  Thread -> id: 3194 -> priority: 1 
+  Thread -> id: 3df8 -> priority: 1 
+  Thread -> id: 2a68 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.320294 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 708.
+Total: 6.261623 ms (FindLiveObjects: 0.060397 ms CreateObjectMapping: 0.050923 ms MarkObjects: 0.503708 ms  DeleteObjects: 5.645408 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.885438 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 590.
+Total: 7.010870 ms (FindLiveObjects: 0.045791 ms CreateObjectMapping: 0.051318 ms MarkObjects: 0.602397 ms  DeleteObjects: 6.310967 ms)
+
