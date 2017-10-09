@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    private int scoreNum = 0;
+    private int scoreNum;
 
     public const int RECTANGLE_SCORE = 100;
     public const int TRIANGLE_SCORE = 200;
@@ -24,6 +24,7 @@ public class ScoreManager : MonoBehaviour {
 
     void Start ()
     {
+        scoreNum = PlayerPrefs.GetInt("Score", 0);
         Text score = this.GetComponent<Text>();
         score.text = "Score: " + scoreNum.ToString();
     }
@@ -47,6 +48,17 @@ public class ScoreManager : MonoBehaviour {
 
         // Updates text
         scoreNum += scoreIncrement;
+        Text score = this.GetComponent<Text>();
+        score.text = "Score: " + scoreNum.ToString();
+
+        // Saves the player's score
+        PlayerPrefs.SetInt("Score", scoreNum);
+    }
+
+    public void ResetScore()
+    {
+        scoreNum = 0;
+        PlayerPrefs.SetInt("Score", scoreNum);
         Text score = this.GetComponent<Text>();
         score.text = "Score: " + scoreNum.ToString();
     }
