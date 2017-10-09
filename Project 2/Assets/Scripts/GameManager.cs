@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    private const float POWER_UP_CHANCE = 1f;
+    private const float POWER_UP_CHANCE = 0.4f;
 
     public float resetDelay = 1f;
     public int brickNum = 20;
@@ -59,19 +59,41 @@ public class GameManager : MonoBehaviour {
         if (brickNum <= 0)
         {
             youWin.gameObject.SetActive(true);
-            //Slow-mo
+
+            // Slow-mo
             Time.timeScale = .25f;
-            Invoke("ResetLevel", resetDelay);
+
+            Invoke("LoadNextLevel", resetDelay);
         }
 
         if (lifeNum <= 0)
         {
+
             gameOver.gameObject.SetActive(true);
-            //Slow-mo
+
+            // Slow-mo
             Time.timeScale = .25f;
+
+            // Score gets reset
+            ScoreManager.instance.ResetScore();
             Invoke("ResetLevel", resetDelay);
         }
 
+    }
+
+    // Loads new level, or menu if at level 3 (last level)
+    void LoadNextLevel()
+    {
+        Time.timeScale = 1f;
+
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     // Resets the scene
