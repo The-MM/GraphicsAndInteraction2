@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour {
             Invoke("LoadNextLevel", resetDelay);
         }
 
+		// You have died
         if (lifeNum <= 0)
         {
 
@@ -76,10 +77,17 @@ public class GameManager : MonoBehaviour {
 
             // Score gets reset
             ScoreManager.instance.ResetScore();
-            Invoke("ResetLevel", resetDelay);
+			Invoke("LoadMainMenu", resetDelay);
         }
 
     }
+
+	void LoadMainMenu(){
+
+		Time.timeScale = 1f;
+		SceneManager.LoadScene (0);
+	}
+
 
     // Loads new level, or menu if at level 3 (last level)
     void LoadNextLevel()
@@ -109,15 +117,19 @@ public class GameManager : MonoBehaviour {
         // Decrease lives
         IncrementLife(-1);
 
-        // Turn off power ball mode
-        ball.GetComponent<Ball>().PowerModeOff();
+		CheckGameOver();
+		Destroy(paddle);
 
-        // Reset the paddle
-        Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
-        Destroy(paddle);
-        Invoke("SetupPaddle", resetDelay);
+		if (lifeNum > 0) {
 
-        CheckGameOver();
+			// Turn off power ball mode
+			ball.GetComponent<Ball>().PowerModeOff();
+
+			// Reset the paddle
+			Instantiate(deathParticles, paddle.transform.position, Quaternion.identity);
+			Invoke("SetupPaddle", resetDelay);
+			
+		}
     }
 
     // Changes the number of lives by a certain amount
