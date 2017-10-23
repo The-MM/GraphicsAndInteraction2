@@ -39,7 +39,7 @@ Shader "Unlit/PhasingShader"
 
 				// Change the transparency of the vertex based on time, and make it purple coloured
 				float alphaVal = 128.0f + sin(_Time.y*6) * 64.0f;
-				float4 colourRGBA = float4(112.0f, 12.0f, 130.0f, alphaVal);
+				float4 colourRGBA = float4(176.0f, 24.0f, 207.0f, alphaVal);
 				o.color = float4(colourRGBA.r/255.0f, colourRGBA.g/255.0f, colourRGBA.b/255.0f, colourRGBA.a/255.0f);
 				
 				return o;
