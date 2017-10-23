@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
@@ -24,6 +25,13 @@ public class ScoreManager : MonoBehaviour {
 
     void Start ()
     {
+        // On the first level, always reset score (prevents closing game 
+        // and restarting to increase score)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayerPrefs.SetInt("Score", scoreNum);
+        }
+
         scoreNum = PlayerPrefs.GetInt("Score", 0);
         Text score = this.GetComponent<Text>();
         score.text = "Score: " + scoreNum.ToString();

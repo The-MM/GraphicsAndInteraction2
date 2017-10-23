@@ -43,6 +43,18 @@ public class GameManager : MonoBehaviour {
 
     private void Start()
     {
+        // On the first level, always reset lives (prevents closing game 
+        // and restarting to increase lives)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayerPrefs.SetInt("Lives", lifeNum);
+        }
+        // Otherwise carry lives over from previous level
+        else
+        {
+            lifeNum = PlayerPrefs.GetInt("Lives", lifeNum);
+        }
+
         livesText.text = "Lives: " + lifeNum.ToString();
     }
 
@@ -58,6 +70,9 @@ public class GameManager : MonoBehaviour {
     {
         if (brickNum <= 0)
         {
+            // Save life number for next scene
+            PlayerPrefs.SetInt("Lives", lifeNum);
+
             youWin.gameObject.SetActive(true);
 
             // Slow-mo
@@ -83,9 +98,8 @@ public class GameManager : MonoBehaviour {
     }
 
 	void LoadMainMenu(){
-
 		Time.timeScale = 1f;
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene(0);
 	}
 
 
