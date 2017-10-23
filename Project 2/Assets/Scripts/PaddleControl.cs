@@ -27,7 +27,7 @@ public class PaddleControl : MonoBehaviour {
 
         // Moves based on user input
         float xPos = transform.position.x + (Input.GetAxis("Horizontal") * paddleSpeed);
-        paddlePosition = new Vector3(Mathf.Clamp(xPos, -13f, 13f), -9.5f, 0.0f);
+        paddlePosition = new Vector3(Mathf.Clamp(xPos, -13f, 13f), -9.2f, 0.0f);
         transform.position = paddlePosition;
 
         if (magnetMode && Time.time >= magnetEndTime)
@@ -51,7 +51,7 @@ public class PaddleControl : MonoBehaviour {
         this.transform.localScale += new Vector3(scale, 0.0f, 0.0f);
 
         // Unscales the ball (using crazy maths I made)
-        // For some reason the particle effect does not need unscaling
+        // For some reason the particle effects do not need unscaling
         int i = 0;
         foreach (Transform child in this.transform)
         {
@@ -71,17 +71,21 @@ public class PaddleControl : MonoBehaviour {
             magnetMode = true;
             magnetEndTime = Time.time + duration;
 
-            // Turns on magnet sound and effects (check both children)
+            // Turns on magnet sound and effects (check all 3 children)
             magnetAudio.Play();
             if(this.transform.GetChild(0).name == "Magnet Particles")
             {
                 this.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
             }
-            else
+            else if(this.transform.GetChild(1).name == "Magnet Particles")
             {
                 this.transform.GetChild(1).GetComponent<ParticleSystem>().Play();
             }
-            
+            else
+            {
+                this.transform.GetChild(2).GetComponent<ParticleSystem>().Play();
+            }
+
         }
 
         // Refresh timer if already on
@@ -109,9 +113,13 @@ public class PaddleControl : MonoBehaviour {
         {
             this.transform.GetChild(0).GetComponent<ParticleSystem>().Stop();
         }
-        else
+        else if (this.transform.GetChild(1).name == "Magnet Particles")
         {
             this.transform.GetChild(1).GetComponent<ParticleSystem>().Stop();
+        }
+        else
+        {
+            this.transform.GetChild(2).GetComponent<ParticleSystem>().Stop();
         }
 
         magnetMode = false;

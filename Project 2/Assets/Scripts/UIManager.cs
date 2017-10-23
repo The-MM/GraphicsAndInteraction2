@@ -9,9 +9,10 @@ public class UIManager : MonoBehaviour {
     public GameObject volumeSlider;
     public GameObject difficultySlider;
 
-    // Set the game volume on startup
+    
     void Start()
     {
+        // Set the game volume on startup
         AudioListener.volume = PlayerPrefs.GetFloat("Volume Level");
     }
 
